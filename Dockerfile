@@ -1,10 +1,10 @@
-FROM node:12.6.0-alpine
+FROM node:14-alpine
 
 WORKDIR /app
 
-COPY ./package.json ./package-lock.json /app/
+COPY ./package.json ./yarn.lock /app/
 
-RUN npm install
+RUN yarn install
 
 EXPOSE 15500
 

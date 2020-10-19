@@ -6,7 +6,7 @@ COPY ./package.json ./yarn.lock /app/
 
 RUN yarn install
 
-EXPOSE 15500
+EXPOSE 80
 
 COPY . /app/
 

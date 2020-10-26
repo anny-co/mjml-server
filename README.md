@@ -21,11 +21,11 @@ For an elaborate discussion see: https://github.com/mjmlio/mjml/issues/340
 #### Usage
 
 ```
-docker run -p 15500:15500 danihodovic/mjml-server
+docker run -p 8080:80 fibis/mjml-server
 ```
 
 ```
-$ http POST localhost:15500/v1/render
+$ http POST localhost:8080/v1/render
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 2141

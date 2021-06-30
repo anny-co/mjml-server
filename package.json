@@ -1,6 +1,6 @@
 {
   "name": "@anny-co/mjml-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dockerized mjml http server from https://github.com/shyim/mjml-server",
   "main": "index.js",
   "scripts": {

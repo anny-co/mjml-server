@@ -1,9 +1,10 @@
 {
-  "name": "mjml-http-server",
-  "version": "0.0.3",
+  "name": "@anny-co/mjml-server",
+  "version": "0.1.0",
   "description": "Dockerized mjml http server from https://github.com/shyim/mjml-server",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha"
   },
   "files": [
@@ -14,19 +15,30 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danihodovic/mjml-http-server.git"
+    "url": "git+https://github.com/anny-co/mjml-server.git"
   },
   "author": "Dani Hodovic",
+  "contributors": [
+    {
+      "name": "Alexander Bartolomey",
+      "email": "alexander.bartolomey@anny.co",
+      "url": "https://anny.co/"
+    },
+    {
+      "name": "Adriaan Wind",
+      "email": "adriaan.wind@anny.co",
+      "url": "https://anny.co/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danihodovic/mjml-http-server/issues"
+    "url": "https://github.com/anny-co/mjml-server/issues"
   },
   "bin": {
     "mjml-http-server": "./index.js"
   },
-  "homepage": "https://github.com/danihodovic/mjml-http-server#readme",
+  "homepage": "https://github.com/anny-co/mjml-server#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-winston": "^4.0.2",
     "install": "^0.13.0",

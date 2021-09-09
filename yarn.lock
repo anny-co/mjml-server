@@ -2084,10 +2084,10 @@ node-fetch@^2.6.0:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
-node-graceful@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/node-graceful/-/node-graceful-3.0.1.tgz#6070568e5b76c4018122fcb27e59bc9709c49937"
-  integrity sha512-V1jabqH6+P+XD/b5DKSMB4f/xWQpxgpSL+d850yQ09DIAWlo59Io5MNsJQD6TKjq3Gj6hC3uJ2GomDdmsL49xw==
+node-graceful@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/node-graceful/-/node-graceful-3.1.0.tgz#fab88c96ed1975b939a91bc5be48f0e1c10d0afe"
+  integrity sha512-fGH0ijsO5ZDDY405mP6bE0eNrHQhpjDrihhaviqprP1+aJEWy7bZtzXESp3ZAo6hBTtxOFe7RfSkcqFX001gJQ==
 
 nopt@^5.0.0:
   version "5.0.0"

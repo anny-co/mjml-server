@@ -40,7 +40,7 @@
   "homepage": "https://github.com/anny-co/mjml-server#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-winston": "^4.0.2",
+    "express-winston": "^4.2.0",
     "install": "^0.13.0",
     "mjml": "^4.10.3",
     "node-graceful": "^3.1.0",

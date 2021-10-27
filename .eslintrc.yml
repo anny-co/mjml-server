@@ -6,5 +6,6 @@ plugins:
   - no-only-tests
 rules:
   node/exports-style: ["error", "module.exports"]
-  semi: [2, "always"]
+  semi: ["warn", "always"]
   no-only-tests/no-only-tests: error
+  quotes: ["warn", "double"]

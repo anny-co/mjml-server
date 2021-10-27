@@ -43,3 +43,13 @@ X-Powered-By: Express
 
 A list of available configuration options can be found in
 [./lib/parse_args.js](./lib/parse_args.js).
+
+### Authentication
+
+When exposing the mjml API server to the web, you can opt-in to use authentication.
+
+Available options are
+
+- (a) HTTP basic auth
+- (b) Predefined token in query parameter `?token` or as HTTP header `X-Authentication-Token`
+

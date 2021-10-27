@@ -1,6 +1,6 @@
 {
   "name": "@anny-co/mjml-server",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Dockerized mjml http server from https://github.com/shyim/mjml-server",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test": "mocha"
   },
   "files": [
-    "/lib",
+    "server.js",
+    "authentication.js",
     "index.js",
     "LICENSE",
     "README.md"
@@ -39,20 +40,21 @@
   },
   "homepage": "https://github.com/anny-co/mjml-server#readme",
   "dependencies": {
+    "basic-auth": "^2.0.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-winston": "^4.0.2",
     "install": "^0.13.0",
-    "mjml": "^4.10.3",
+    "mjml": "4.10.4",
     "node-graceful": "^3.1.0",
-    "winston": "^3.2.1",
-    "yargs": "^17.1.1"
+    "pino": "^7.0.5",
+    "pino-http": "^5.8.0"
   },
   "devDependencies": {
     "axios": "^0.21.1",
     "chai": "^4.2.0",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-no-only-tests": "^2.3.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^5.1.0",

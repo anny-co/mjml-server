@@ -6,7 +6,7 @@ The API is compatible with https://mjml.io/api in that it only exposes one
 endpoint - `/v1/render`, but doesn't require authentication. You should probably
 run this within your own private network.
 
-#### Why?
+## Why?
 
 You're writing an app in another language than Javascript and need to interop
 with MJML. Instead of embedding NodeJS in your Python image you can call MJML
@@ -18,10 +18,10 @@ be sent to yet another third party?).
 
 For an elaborate discussion see: https://github.com/mjmlio/mjml/issues/340
 
-#### Usage
+## Usage
 
 ```
-docker run -p 8080:80 fibis/mjml-server
+docker run -p 8080:80 ghcr.io/anny-co/mjml-server
 ```
 
 ```
@@ -39,12 +39,30 @@ X-Powered-By: Express
 }
 ```
 
-#### Configuration
+## Configuration
 
-A list of available configuration options can be found in
-[./lib/parse_args.js](./lib/parse_args.js).
+Configure the server either with environment variables or with a `.env` file in the server's root directory:
 
-### Authentication
+```sh
+HOST=0.0.0.0
+PORT=80
+
+# mjml configuration
+KEEP_COMMENTS=true
+BEAUTIFY=false
+MINIFY=false
+VALIDATION_LEVEL=soft # "strict", "soft", "skip"
+MAX_BODY=1mb
+
+# authentication configuration
+AUTH_ENABLED=false
+AUTH_TYPE=none # "basic", "token", "none"
+BASIC_AUTH_PASSWORD=
+BASIC_AUTH_USERNAME=
+AUTH_TOKEN=
+```
+
+## Authentication
 
 When exposing the mjml API server to the web, you can opt-in to use authentication.
 
@@ -53,3 +71,4 @@ Available options are
 - (a) HTTP basic auth
 - (b) Predefined token in query parameter `?token` or as HTTP header `X-Authentication-Token`
 
+See the above section for required configuration values.

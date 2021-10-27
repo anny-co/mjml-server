@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-const { logger } = require('./lib/logging.js');
-const graceful = require('node-graceful');
+require("dotenv").config();
+const graceful = require("node-graceful");
+const logger = require("pino")();
+const app = require("./server").create();
 
-const { create } = require('./lib/server.js');
-const argv = require('./lib/parse_args.js').argv;
-
-const server = create(argv).listen(argv.port, argv.host, () => {
-  logger.info(`Starting server on port ${argv.port}`);
+// app.listen returns nodejs' http.Server, which we need to close it gracefully
+const server = app.listen(app.port, app.host, () => {
+  logger.info({ port: app.port, hostname: app.host }, "Starting mjml api server");
 });
 
-graceful.on('exit', (done, event, signal) => {
-  logger.info(`Received ${signal} signal - exiting gracefully...`);
+graceful.on("exit", (done, event, signal) => {
+  logger.info(`Received ${signal} signal - exiting gracefully`);
   server.close(done);
 });

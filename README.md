@@ -1,4 +1,4 @@
-# mjml-http-server
+# mjml-server
 
 A self-hosted alternative to the mjml API. Built with express.
 

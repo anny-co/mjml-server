@@ -86,7 +86,7 @@ function serverFactory (factoryOptions) {
   });
 
   // Generic healthchecking endpoints
-  app.get(["/healthz", "/livez", "/readyz"], (_, res) => res.status(200));
+  app.get(["/healthz", "/livez", "/readyz"], (_, res) => res.status(200).end());
 
   return Object.assign(app, {
     port: options.port,

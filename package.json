@@ -41,7 +41,7 @@
   "homepage": "https://github.com/anny-co/mjml-server#readme",
   "dependencies": {
     "basic-auth": "^2.0.1",
-    "dotenv": "^11.0.0",
+    "dotenv": "^14.3.0",
     "express": "^4.17.2",
     "install": "^0.13.0",
     "mjml": "4.11.0",

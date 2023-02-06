@@ -47,7 +47,7 @@
     "mjml": "4.13.0",
     "node-graceful": "^3.1.0",
     "pino": "^8.8.0",
-    "pino-http": "^8.2.1"
+    "pino-http": "^8.3.3"
   },
   "devDependencies": {
     "axios": "^1.2.2",

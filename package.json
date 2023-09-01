@@ -46,7 +46,7 @@
     "install": "^0.13.0",
     "mjml": "4.14.1",
     "node-graceful": "^3.1.0",
-    "pino": "^8.14.1",
+    "pino": "^8.15.0",
     "pino-http": "^8.4.0"
   },
   "devDependencies": {

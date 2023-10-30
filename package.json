@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "axios": "^1.6.0",
-    "chai": "^4.3.8",
+    "chai": "^4.3.10",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.28.1",

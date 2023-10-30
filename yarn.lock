@@ -2535,10 +2535,10 @@ pino-abstract-transport@v1.1.0:
     readable-stream "^4.0.0"
     split2 "^4.0.0"
 
-pino-http@^8.4.0:
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-8.4.0.tgz#ebfd601f7244d7bd9ead578843025505da4e3f56"
-  integrity sha512-9I1eRLxsujQJwLQTrHBU0wDlwnry2HzV2TlDwAsmZ9nT3Y2NQBLrz+DYp73L4i11vl/eudnFT8Eg0Kp62tMwEw==
+pino-http@^8.5.1:
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-8.5.1.tgz#b4afb7d40687710f463588c0659d6a931285bf46"
+  integrity sha512-T/3d9YHKBYpv/QHjNy73P5BNYYkRrC2/D6CxKMecG4fKFLN+B2iC6LsKYzGRTRV+Ld3fjxFC1ca4TUGbPdzk+Q==
   dependencies:
     get-caller-file "^2.0.5"
     pino "^8.0.0"

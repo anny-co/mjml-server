@@ -2535,13 +2535,13 @@ pino-abstract-transport@v1.1.0:
     readable-stream "^4.0.0"
     split2 "^4.0.0"
 
-pino-http@^8.5.1:
-  version "8.5.1"
-  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-8.5.1.tgz#b4afb7d40687710f463588c0659d6a931285bf46"
-  integrity sha512-T/3d9YHKBYpv/QHjNy73P5BNYYkRrC2/D6CxKMecG4fKFLN+B2iC6LsKYzGRTRV+Ld3fjxFC1ca4TUGbPdzk+Q==
+pino-http@^8.6.0:
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-8.6.0.tgz#aece5584f0dd26a82aa5302a0039b3dfeb72a214"
+  integrity sha512-SMkt0R7nzoX76BhTlmCWg0s2F0UYKGeln8y+thL2OUcCxZbbPB1AqgrEMuHAjHyc7oBefext3Af3ZT3k9ieETw==
   dependencies:
     get-caller-file "^2.0.5"
-    pino "^8.0.0"
+    pino "^8.17.0"
     pino-std-serializers "^6.0.0"
     process-warning "^2.0.0"
 
@@ -2550,10 +2550,10 @@ pino-std-serializers@^6.0.0:
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-6.0.0.tgz#4c20928a1bafca122fdc2a7a4a171ca1c5f9c526"
   integrity sha512-mMMOwSKrmyl+Y12Ri2xhH1lbzQxwwpuru9VjyJpgFIH4asSj88F2csdMwN6+M5g1Ll4rmsYghHLQJw81tgZ7LQ==
 
-pino@^8.0.0, pino@^8.16.2:
-  version "8.16.2"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-8.16.2.tgz#7a906f2d9a8c5b4c57412c9ca95d6820bd2090cd"
-  integrity sha512-2advCDGVEvkKu9TTVSa/kWW7Z3htI/sBKEZpqiHk6ive0i/7f5b1rsU8jn0aimxqfnSz5bj/nOYkwhBUn5xxvg==
+pino@^8.16.2, pino@^8.17.0:
+  version "8.17.1"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-8.17.1.tgz#f886569cd9abf458f4c921dc696fb023694c1103"
+  integrity sha512-YoN7/NJgnsJ+fkADZqjhRt96iepWBndQHeClmSBH0sQWCb8zGD74t00SK4eOtKFi/f8TUmQnfmgglEhd2kI1RQ==
   dependencies:
     atomic-sleep "^1.0.0"
     fast-redact "^3.1.1"

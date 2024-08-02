@@ -50,7 +50,7 @@
     "pino-http": "^10.2.0"
   },
   "devDependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.7.3",
     "chai": "^4.3.10",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.2",

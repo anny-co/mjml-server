@@ -2692,15 +2692,15 @@ pino-abstract-transport@^2.0.0:
   dependencies:
     split2 "^4.0.0"
 
-pino-http@^10.2.0:
-  version "10.4.0"
-  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-10.4.0.tgz#a97911138fd5170e6da92ae8882c2a6357e84115"
-  integrity sha512-vjQsKBE+VN1LVchjbfLE7B6nBeGASZNRNKsR68VS0DolTm5R3zo+47JX1wjm0O96dcbvA7vnqt8YqOWlG5nN0w==
+pino-http@^10.5.0:
+  version "10.5.0"
+  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-10.5.0.tgz#6a4fd8df93a181fc89f7f89979b8a2146aad29f2"
+  integrity sha512-hD91XjgaKkSsdn8P7LaebrNzhGTdB086W3pyPihX0EzGPjq5uBJBXo4N5guqNaK6mUjg9aubMF7wDViYek9dRA==
   dependencies:
     get-caller-file "^2.0.5"
     pino "^9.0.0"
     pino-std-serializers "^7.0.0"
-    process-warning "^4.0.0"
+    process-warning "^5.0.0"
 
 pino-std-serializers@^7.0.0:
   version "7.0.0"
@@ -2733,11 +2733,6 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
-
-process-warning@^4.0.0:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/process-warning/-/process-warning-4.0.1.tgz#5c1db66007c67c756e4e09eb170cdece15da32fb"
-  integrity sha512-3c2LzQ3rY9d0hc1emcsHhfT9Jwz0cChib/QN89oME2R451w5fy3f0afAhERFZAwrbDU43wk12d0ORBpDVME50Q==
 
 process-warning@^5.0.0:
   version "5.0.0"

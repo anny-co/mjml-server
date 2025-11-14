@@ -44,7 +44,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "install": "^0.13.0",
-    "mjml": "4.16.1",
+    "mjml": "4.17.0",
     "node-graceful": "^3.1.0",
     "pino": "^10.1.0",
     "pino-http": "^11.0.0"

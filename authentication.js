@@ -71,6 +71,7 @@ function makeMiddleware (options) {
     // authentication is not enabled, skip this middleware
     if (!authentication.enabled || authentication.type === "none") {
       next();
+      return;
     }
 
     if (authentication.type === "basic") {
@@ -82,6 +83,7 @@ function makeMiddleware (options) {
       } else {
         next();
       }
+      return;
     }
 
     if (authentication.type === "token") {
@@ -91,7 +93,11 @@ function makeMiddleware (options) {
       } else {
         next();
       }
+      return;
     }
+
+    // Unknown auth type — fail closed.
+    res.status(401).end();
   };
   return authMiddleware;
 }

@@ -1,10 +1,20 @@
 # mjml-server
 
-A self-hosted alternative to the mjml API. Built with express.
+A self-hosted alternative to the mjml API. Built with [Fastify](https://fastify.dev/) and MJML 5.
 
 The API is compatible with https://mjml.io/api in that it only exposes one
 endpoint - `/v1/render`, but doesn't require authentication. You should probably
 run this within your own private network.
+
+## Features
+
+- MJML 5 with htmlnano + cssnano minification
+- In-process LRU response cache (sha256-keyed)
+- Optional cluster mode using all CPU cores
+- HTTP basic auth or shared-token auth
+- Structured JSON logs (pino) with auth-header redaction
+- Prometheus metrics at `/metrics` (render histogram, counters, cache size, default Node metrics)
+- Healthcheck endpoints for k8s: `/healthz`, `/livez`, `/readyz`
 
 ## Why?
 
@@ -46,6 +56,7 @@ Configure the server either with environment variables or with a `.env` file in 
 ```sh
 HOST=0.0.0.0
 PORT=80
+WORKERS=auto                 # number of cluster workers; "auto" = CPU count, 1 = no clustering
 
 # mjml configuration (mjml v5)
 KEEP_COMMENTS=true
@@ -53,7 +64,15 @@ BEAUTIFY=false               # output beautification (htmlnano-driven in v5)
 MINIFY=false                 # output minification (htmlnano + cssnano in v5)
 SANITIZE_STYLES=false        # sanitize template variables in CSS before PostCSS/minification
 VALIDATION_LEVEL=soft        # "strict", "soft", "skip"
-MAX_BODY=1mb
+MAX_BODY_BYTES=1048576       # request body limit in bytes (Fastify uses bytes, not "1mb")
+
+# response cache (in-memory LRU keyed by sha256(mjml + config))
+CACHE_ENABLED=true           # set to false to disable
+CACHE_MAX=500                # max entries
+CACHE_TTL_MS=0               # 0 = no TTL
+
+# observability
+METRICS_ENABLED=true         # exposes Prometheus metrics at GET /metrics
 
 # authentication configuration
 AUTH_ENABLED=false
@@ -62,6 +81,19 @@ BASIC_AUTH_PASSWORD=
 BASIC_AUTH_USERNAME=
 AUTH_TOKEN=
 ```
+
+Responses include an `X-Cache: HIT|MISS` header when caching is enabled.
+
+## Development
+
+```sh
+yarn install
+yarn test    # node --test
+yarn lint    # eslint (flat config, neostandard)
+yarn start   # node index.js
+```
+
+Requires Node.js ≥20. CI matrix runs on Node 20, 22, and 24.
 
 ## Authentication
 

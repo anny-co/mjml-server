@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24.x'
-      - run: yarn install
-      - run: npx eslint .
+      - run: yarn install --immutable
+      - run: yarn lint

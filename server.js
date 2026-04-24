@@ -17,6 +17,7 @@ function serverFactory (factoryOptions) {
     keepComments: Boolean(process.env.KEEP_COMMENTS) || true,
     beautify: Boolean(process.env.BEAUTIFY) || false,
     minify: Boolean(process.env.MINIFY) || false,
+    sanitizeStyles: Boolean(process.env.SANITIZE_STYLES) || false,
     validationLevel: process.env.VALIDATION_LEVEL || "soft", // choices: "strict", "soft", "skip"
     maxBody: process.env.MAX_BODY || "1mb",
     "mjml-version": pkg.dependencies.mjml, // requires launching through either npm or yarn, but not directly node,
@@ -48,7 +49,7 @@ function serverFactory (factoryOptions) {
   logger.info({ config: options }, "Parsed configuration");
 
   // main API endpoint for mjml renderer
-  app.post("/v1/render", authentication(options.authentication), (req, res, next) => {
+  app.post("/v1/render", authentication(options.authentication), async (req, res, next) => {
     let mjmlText;
 
     // attempt to parse JSON off of body
@@ -62,12 +63,13 @@ function serverFactory (factoryOptions) {
     let result;
     const config = {
       keepComments: options.keepComments,
-      beautify: options.beautify, // TODO(fibis): no longer supported in mjml ^4.0.0, see deprectation notice
-      minify: options.minify, // TODO(fibis): no longer supported in mjml ^4.0.0, see deprectation notice
+      beautify: options.beautify,
+      minify: options.minify,
+      sanitizeStyles: options.sanitizeStyles,
       validationLevel: options.validationLevel
     };
     try {
-      result = mjml(mjmlText, config);
+      result = await mjml(mjmlText, config);
     } catch (err) {
       req.log.error(err);
       res.status(500).send({ message: "Failed to compile mjml", ...err });

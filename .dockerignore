@@ -28,3 +28,10 @@ node_modules
 
 server/*.spec.js
 kubernetes
+
+# Yarn 4 caches/state — regenerated inside the image
+.yarn/cache
+.yarn/install-state.gz
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*

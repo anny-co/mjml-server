@@ -47,11 +47,12 @@ Configure the server either with environment variables or with a `.env` file in 
 HOST=0.0.0.0
 PORT=80
 
-# mjml configuration
+# mjml configuration (mjml v5)
 KEEP_COMMENTS=true
-BEAUTIFY=false
-MINIFY=false
-VALIDATION_LEVEL=soft # "strict", "soft", "skip"
+BEAUTIFY=false               # output beautification (htmlnano-driven in v5)
+MINIFY=false                 # output minification (htmlnano + cssnano in v5)
+SANITIZE_STYLES=false        # sanitize template variables in CSS before PostCSS/minification
+VALIDATION_LEVEL=soft        # "strict", "soft", "skip"
 MAX_BODY=1mb
 
 # authentication configuration

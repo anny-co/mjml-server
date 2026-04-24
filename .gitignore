@@ -95,3 +95,12 @@ typings/
 # End of https://www.gitignore.io/api/node
 
 .idea
+
+# Yarn 4 / Berry — keep releases/plugins/patches, ignore caches & PnP
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

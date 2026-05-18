@@ -43,7 +43,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "fastify": "^5.2.1",
-    "lru-cache": "^11.3.6",
+    "lru-cache": "^11.4.0",
     "mjml": "^5.2.0",
     "prom-client": "^15.1.3"
   },

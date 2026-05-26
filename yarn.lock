@@ -12,7 +12,7 @@ __metadata:
     dotenv: "npm:^17.4.2"
     eslint: "npm:^9.16.0"
     fastify: "npm:^5.2.1"
-    lru-cache: "npm:^11.3.6"
+    lru-cache: "npm:^11.5.0"
     mjml: "npm:^5.2.2"
     neostandard: "npm:^0.13.0"
     prom-client: "npm:^15.1.3"
@@ -2974,10 +2974,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^11.3.6":
-  version: 11.3.6
-  resolution: "lru-cache@npm:11.3.6"
-  checksum: 10c0/3afe3e3000e424c18b640dcea5776b5c1de8684b7dac9718d58792dff1a4692b38cc14e263cbb41bdab98ffcf5408f003b33133b179ce5d271284be72a3ff2a9
+"lru-cache@npm:^11.5.0":
+  version: 11.5.0
+  resolution: "lru-cache@npm:11.5.0"
+  checksum: 10c0/b92c2a7518128dec6b244bf3eb9fd79964d316cdeb12865ebfc2cebb4dfe9b24e3767a3923d71e6eb735f56b557fc55f08f150a53097d7805afb628c90158df4
   languageName: node
   linkType: hard
 

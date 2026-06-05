@@ -30,8 +30,12 @@ For an elaborate discussion see: https://github.com/mjmlio/mjml/issues/340
 
 ## Usage
 
+The container runs as a non-root user and listens on the non-privileged port
+`8080` by default (binding ports < 1024 as non-root requires
+`CAP_NET_BIND_SERVICE`).
+
 ```
-docker run -p 8080:80 ghcr.io/anny-co/mjml-server
+docker run -p 8080:8080 ghcr.io/anny-co/mjml-server
 ```
 
 ```
@@ -55,7 +59,7 @@ Configure the server either with environment variables or with a `.env` file in 
 
 ```sh
 HOST=0.0.0.0
-PORT=80
+PORT=8080                     # container default; use a port >= 1024 when running as non-root
 WORKERS=auto                 # number of cluster workers; "auto" = CPU count, 1 = no clustering
 
 # mjml configuration (mjml v5)

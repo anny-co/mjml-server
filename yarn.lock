@@ -11,7 +11,7 @@ __metadata:
   dependencies:
     dotenv: "npm:^17.4.2"
     eslint: "npm:^9.16.0"
-    fastify: "npm:^5.12.1"
+    fastify: "npm:^5.12.3"
     lru-cache: "npm:^11.5.2"
     mjml: "npm:^5.4.1"
     neostandard: "npm:^0.13.0"
@@ -1866,9 +1866,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify@npm:^5.12.1":
-  version: 5.12.1
-  resolution: "fastify@npm:5.12.1"
+"fastify@npm:^5.12.3":
+  version: 5.12.3
+  resolution: "fastify@npm:5.12.3"
   dependencies:
     "@fastify/ajv-compiler": "npm:^4.0.5"
     "@fastify/error": "npm:^4.0.0"
@@ -1885,7 +1885,7 @@ __metadata:
     secure-json-parse: "npm:^4.0.0"
     semver: "npm:^7.6.0"
     toad-cache: "npm:^3.7.0"
-  checksum: 10c0/07e2219db3d7d522519fe16bfefa1768d3bbcb80a161762131db7315812af3f7a4cd131358985a9aeb84ab24c069a362ec3ef592a3a29eb4fa3446e77bbf6678
+  checksum: 10c0/ac46280066006375009ead35210971bfc0088c1efc5526029984cc2d5eb61d4a3721651ac9a0bf3b5b7faa2631cfc77862dc1051495eacc121e7b1a607d60871
   languageName: node
   linkType: hard
 

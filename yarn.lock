@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@anny-co/mjml-server@workspace:."
   dependencies:
-    dotenv: "npm:^17.4.2"
+    dotenv: "npm:^18.0.2"
     eslint: "npm:^9.16.0"
     fastify: "npm:^5.12.3"
     lru-cache: "npm:^11.5.2"
@@ -1310,10 +1310,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^17.4.2":
-  version: 17.4.2
-  resolution: "dotenv@npm:17.4.2"
-  checksum: 10c0/164f8e77a646c8446867d5b588d26ea6005c8ea7c5eb41cf926f6113d23f2191355f6e0cfd95ea9bab98394a5b0a3f1e51a8399711b666fe55cc7b0bd745f942
+"dotenv@npm:^18.0.2":
+  version: 18.0.2
+  resolution: "dotenv@npm:18.0.2"
+  bin:
+    dotenv: dist/index.cjs
+  checksum: 10c0/c16e179205096a7028eea5fba2062dbd25e88d93a0beb66d219507d4585f63ec3f02fda755eee5dca790b7424391a39332830b19983003f0d8d449fbc6845424
   languageName: node
   linkType: hard
 

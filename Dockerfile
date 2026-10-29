@@ -1,4 +1,6 @@
-FROM node:24-alpine AS deps
+# Install deps natively on the build host: they are pure JS, and `yarn install`
+# under QEMU arm64 emulation crashed (illegal instruction) and hung CI for 6h.
+FROM --platform=$BUILDPLATFORM node:24-alpine AS deps
 WORKDIR /app
 COPY package.json yarn.lock .yarnrc.yml ./
 RUN corepack enable && yarn install --immutable
